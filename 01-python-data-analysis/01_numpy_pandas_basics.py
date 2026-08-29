@@ -30,12 +30,12 @@ print(df)
 
 
 # 3 CSV faylni o'qing va describe() natijasini tahlil qiling
-df = pd.read_csv('talabalar.csv')
+df = pd.read_csv('data/talabalar.csv')
 print(df.describe())
 
 
 # 4 groupby() bilan bitta savol toping va javobini yozing
-df = pd.read_csv('talabalar.csv')
+df = pd.read_csv('data/talabalar.csv')
 
 Savol = 'Toshkentda nechta talaba bor'
 print(
@@ -45,7 +45,7 @@ print(
 Javob = '9 ta oqidi, 91 bitta oqimidi'
 
 # 5 Kaggle bilan tanishib chiqing va dataset yuklab darsda o'rgangan bilimlaringizni qo'llang
-df = pd.read_csv('talabalar.csv')
+df = pd.read_csv('data/talabalar.csv')
 
 print(df.head()) # birinchi 5 ta
 print(df.tail()) # ohirgi 5 ta

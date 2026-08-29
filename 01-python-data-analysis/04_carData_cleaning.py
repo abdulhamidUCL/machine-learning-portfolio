@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('cardekho.csv')
+df = pd.read_csv('data/cardekho.csv')
 
 task1 = 'task1'
 print(df.isnull().sum().sort_values(ascending=False).head(10))

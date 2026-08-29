@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # 1 case
 
 
-df = pd.read_csv('case1_temperature_line.csv')
+df = pd.read_csv('data/case1_temperature_line.csv')
 
 fig, ax = plt.subplots()
 ax.plot(df['month'], df['Tashkent'], label='Tashkent')
@@ -22,7 +22,7 @@ plt.show()
 
 # 2 case
 #
-df = pd.read_csv('case2_sales_bar.csv')
+df = pd.read_csv('data/case2_sales_bar.csv')
 
 for i in range(len(df)):
     plt.bar(df['revenue_usd'][i], df['units_sold'][i], label=df['category'][i], width=3000,)
@@ -36,7 +36,7 @@ plt.show()
 
 # 3 case
 
-df = pd.read_csv('case3_study_scatter.csv')
+df = pd.read_csv('data/case3_study_scatter.csv')
 
 plt.figure(figsize=(10,6))
 
@@ -52,7 +52,7 @@ plt.show()
 
 # 4 case
 
-df = pd.read_csv('case4_ages_histogram.csv')
+df = pd.read_csv('data/case4_ages_histogram.csv')
 
 plt.hist(df['customer_id'], bins=df['customer_id'], weights=df['age'])
 
@@ -65,7 +65,7 @@ plt.show()
 
 # 5 case
 
-df = pd.read_csv('case5_health_heatmap.csv')
+df = pd.read_csv('data/case5_health_heatmap.csv')
 
 correlation = df.corr()
 
@@ -79,7 +79,7 @@ plt.show()
 
 # case 6
 
-df = pd.read_csv('case6_salary_boxplot.csv')
+df = pd.read_csv('data/case6_salary_boxplot.csv')
 
 departments = df['department'].unique()
 
