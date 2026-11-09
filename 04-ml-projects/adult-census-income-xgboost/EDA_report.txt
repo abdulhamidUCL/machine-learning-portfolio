@@ -1,0 +1,37 @@
+### Exploratory Data Analysis
+
+The Adult Census Income dataset contains 32,561 observations and 15 original columns. The objective is to predict whether an individual's annual income exceeds $50,000.
+
+**1. Target distribution**
+
+The target variable is imbalanced. Approximately 76% of individuals earn at most $50K, while 24% earn more than $50K. Therefore, accuracy alone may not be sufficient to evaluate the model. Precision, recall, F1-score and ROC-AUC will also be considered.
+
+**2. Numerical features**
+
+Age distribution shows that most observations belong to working-age individuals. The age-group analysis indicates that the proportion of individuals earning above $50K increases until the 45–55 age group, where it reaches approximately 39.86%, and then decreases.
+
+Capital-gain and capital-loss contain a large number of zero values. These features require further investigation because non-zero values may provide useful information about income.
+
+**3. Categorical features**
+
+The dataset contains several categorical variables, including workclass, occupation, marital-status, relationship, race, sex and native-country.
+
+Private employment is the most common workclass, while the majority of individuals are from the United States.
+
+**4. Missing values**
+
+Missing values are represented by question marks in the original dataset. They are concentrated in workclass, occupation and native-country.
+
+Missing workclass and occupation values appear more frequently in the lower-income group. Therefore, missing values will be preserved as an Unknown category rather than deleting the corresponding observations.
+
+**5. Feature redundancy**
+
+The education and education-num features represent essentially the same educational information. Education-num already provides an ordered numerical representation, so education was removed to avoid unnecessary redundancy.
+
+**6. Data quality**
+
+The original dataset contains 24 duplicate rows. These were removed during cleaning.
+
+**EDA conclusion**
+
+The dataset contains a mixture of numerical and categorical features, some missing values, an imbalanced target and potentially useful nonlinear relationships. These observations will guide the preprocessing and feature engineering stages before training XGBoost.
